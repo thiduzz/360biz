@@ -9,29 +9,19 @@
             <h1>Porque o Google Business Photos?</h1>
         </div>
         <div class="row">
+
             <div class="col-md-4">
                 <div class="panel-thumbnail "><img src="img/ic_clients.png" class="img-responsive center-block"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel-thumbnail"><img src="img/ic_location.png" class="img-responsive center-block"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel-thumbnail"><img src="img/ic_piggy.png" class="img-responsive center-block"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-
                 <h2 class="text-center">Novos clientes</h2>
                 <p>Uma maneira de inovar com o design, conceito e atmosfera do seu negócio. Os clientes irão ser encorajados a entrar em seu ponto comercial muito antes de ver a porta. </p>
             </div>
             <div class="col-md-4">
-
+                <div class="panel-thumbnail"><img src="img/ic_location.png" class="img-responsive center-block"></div>
                 <h2 class="text-center">Posicionamento</h2>
                 <p>Os clientes irão achar o seu negócio de maneira mais rápida e fácil. O Tour Virtual será exibido na pesquisa do Google, Google Maps e Google+ Place e pode fazer parte de seu website. </p>
             </div>
             <div class="col-md-4">
-
+                <div class="panel-thumbnail"><img src="img/ic_piggy.png" class="img-responsive center-block"></div>
                 <h2 class="text-center">Economize</h2>
                 <p>Este é um investimento único para a sessão fotográfica, aquisição, inserção do Tour Virtual e fotografias profissionais no Google. Você não paga taxas adicionais.</p>
             </div>
@@ -73,8 +63,8 @@
         <hr>
 
     </div>
-    <div class="col-sm-3 col-sm-offset-1">
-
+    <div class="col-sm-2 vertical-align">
+        <div><img src="img/apply-agency-badge.jpg" class="img-responsive center-block "></div>
     </div>
     <div class="divider"></div>
 </div><!--/container-->
@@ -168,6 +158,138 @@
 
         </div><!--/row-->
     </div><!--/container-->
+
+    <div class="divider"></div>
+</div>
+
+<section class="bg-1">
+    <div class="col-sm-6 col-sm-offset-3 text-center"></div>
+</section>
+
+<div class="divider" id="section6"></div>
+<div class="page-header text-center">
+    <h1>Como funciona?</h1>
+</div>
+<div class="container">
+
+
+    <div class="col-sm-10 col-sm-offset-1">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="panel-thumbnail "><img src="img/ic_clients.png" class="img-responsive center-block"></div>
+                <h2 class="text-center">Novos clientes</h2>
+                <p>Uma maneira de inovar com o design, conceito e atmosfera do seu negócio. Os clientes irão ser encorajados a entrar em seu ponto comercial muito antes de ver a porta. </p>
+            </div>
+            <div class="col-md-4">
+                <div class="panel-thumbnail"><img src="img/ic_location.png" class="img-responsive center-block"></div>
+                <h2 class="text-center">Posicionamento</h2>
+                <p>Os clientes irão achar o seu negócio de maneira mais rápida e fácil. O Tour Virtual será exibido na pesquisa do Google, Google Maps e Google+ Place e pode fazer parte de seu website. </p>
+            </div>
+            <div class="col-md-4">
+                <div class="panel-thumbnail"><img src="img/ic_piggy.png" class="img-responsive center-block"></div>
+                <h2 class="text-center">Economize</h2>
+                <p>Este é um investimento único para a sessão fotográfica, aquisição, inserção do Tour Virtual e fotografias profissionais no Google. Você não paga taxas adicionais.</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="divider"></div>
+</div>
+
+
+<div class="divider" id="section7"></div>
+<div class="page-header text-center">
+    <h1>Quanto custa?</h1>
+</div>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-4 col-sm-8">
+                <div class="row">
+                    <div class="col-xs-4 my_planHeader my_plan1">
+                        <div class="my_planTitle">Plan 1</div>
+                        <div class="my_planPrice">Free</div>
+                        <div class="my_planDuration"> </div>
+                        <a type="button" class="btn btn-default">Sign Up</a>
+                    </div>
+                    <div class="col-xs-4 my_planHeader my_plan2">
+                        <div class="my_planTitle">Plan 2</div>
+                        <div class="my_planPrice">2€</div>
+                        <div class="my_planDuration">per month</div>
+                        <a type="button" class="btn btn-default">Sign Up</a>
+                    </div>
+                    <div class="col-xs-4 my_planHeader my_plan3">
+                        <div class="my_planTitle">Plan 3</div>
+                        <div class="my_planPrice">3.75€</div>
+                        <div class="my_planDuration">per month</div>
+                        <a type="button" class="btn btn-default">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my_featureRow">
+            <div class="col-xs-12 col-sm-4 my_feature">
+                Feature 1
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan1">
+                        <i class="fa fa-check my_check"></i>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan2">
+                        <i class="fa fa-check my_check"></i>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan3">
+                        <i class="fa fa-check my_check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my_featureRow">
+            <div class="col-xs-12 col-sm-4 my_feature">
+                Feature 2
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan1">
+                        <i class="fa"></i>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan2">
+                        <i class="fa fa-check my_check"></i>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan3">
+                        <i class="fa fa-check my_check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my_featureRow">
+            <div class="col-xs-12 col-sm-4 my_feature">
+                Feature 3
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan1">
+                        <i class="fa"></i>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan2">
+                        <i class="fa"></i>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan3">
+                        <i class="fa fa-check my_check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <div class="divider"></div>
 </div>
 
 <div class="divider" id="section4"></div>
@@ -181,12 +303,11 @@
 
     <div class="col-sm-10 col-sm-offset-1">
         <h1>Localização</h1>
+        </br>
     </div>
 
     <div id="map-canvas"></div>
-
-    <hr>
-
+    </br>
     <div class="col-sm-8"></div>
     <div class="col-sm-3 pull-right">
 

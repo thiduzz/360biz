@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>The Firm - One Page Scroller Template</title>
+    <title>360Biz - Agência de BusinessView</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 @include('layout.footer')
 
 <ul class="nav pull-right scroll-top">
-    <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+    <li><a href="#" title="Subir ao topo"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
 </ul>
 
 

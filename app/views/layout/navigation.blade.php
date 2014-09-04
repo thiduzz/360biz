@@ -25,6 +25,8 @@
                         <li><a href="#">Religious</a></li>
                     </ul>
                 </li>
+                <li><a href="#section6">Serviços</a></li>
+                <li><a href="#section7">Preços</a></li>
                 <li><a href="#section4">Localização</a></li>
                 <li><a href="#section5">Contato</a></li>
             </ul>
