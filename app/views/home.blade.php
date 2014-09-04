@@ -204,107 +204,95 @@
 <div class="page-header text-center">
     <h1>Quanto custa?</h1>
 </div>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h4 class="text-center">
+                    PONTO COMERCIAL PEQUENO</h4>
+                <img src="img/price_small.jpg" class="img-responsive full-size">
+                </br>
+                <h4 class="text-center">
+                    Pequena loja, salão, lanchonete...</h4>
+            </div>
+            <div class="panel-body text-center">
+                <p class="lead">
+                    <strong>R$ 700,00</strong></p>
+            </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-offset-4 col-sm-8">
-                <div class="row">
-                    <div class="col-xs-4 my_planHeader my_plan1">
-                        <div class="my_planTitle">Plan 1</div>
-                        <div class="my_planPrice">Free</div>
-                        <div class="my_planDuration"> </div>
-                        <a type="button" class="btn btn-default">Sign Up</a>
-                    </div>
-                    <div class="col-xs-4 my_planHeader my_plan2">
-                        <div class="my_planTitle">Plan 2</div>
-                        <div class="my_planPrice">2€</div>
-                        <div class="my_planDuration">per month</div>
-                        <a type="button" class="btn btn-default">Sign Up</a>
-                    </div>
-                    <div class="col-xs-4 my_planHeader my_plan3">
-                        <div class="my_planTitle">Plan 3</div>
-                        <div class="my_planPrice">3.75€</div>
-                        <div class="my_planDuration">per month</div>
-                        <a type="button" class="btn btn-default">Sign Up</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row my_featureRow">
-            <div class="col-xs-12 col-sm-4 my_feature">
-                Feature 1
-            </div>
-            <div class="col-xs-12 col-sm-8">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan1">
-                        <i class="fa fa-check my_check"></i>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan2">
-                        <i class="fa fa-check my_check"></i>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan3">
-                        <i class="fa fa-check my_check"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row my_featureRow">
-            <div class="col-xs-12 col-sm-4 my_feature">
-                Feature 2
-            </div>
-            <div class="col-xs-12 col-sm-8">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan1">
-                        <i class="fa"></i>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan2">
-                        <i class="fa fa-check my_check"></i>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan3">
-                        <i class="fa fa-check my_check"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row my_featureRow">
-            <div class="col-xs-12 col-sm-4 my_feature">
-                Feature 3
-            </div>
-            <div class="col-xs-12 col-sm-8">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan1">
-                        <i class="fa"></i>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan2">
-                        <i class="fa"></i>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 my_planFeature my_plan3">
-                        <i class="fa fa-check my_check"></i>
-                    </div>
-                </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>2 Passos + 1</li>
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>Passos extra (R$ 65,00)</li>
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>Gratuitamente 10-20 fotos</li>
+            </ul>
+            <div class="panel-footer">
+                <a class="btn btn-lg btn-block btn-danger" href="http://www.jquery2dotnet.com">ORÇAR</a>
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="text-center">
+                    PONTO COMERCIAL MÉDIO</h4>
+                <img src="img/price_medium.jpg" class="img-responsive full-size">
+                </br>
+                <h4 class="text-center">
+                    Restaurante, bistrô, pousada...</h4>
 
+            </div>
+            <div class="panel-body text-center">
+                <p class="lead">
+                    <strong>R$ 1100,00</strong></p>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>2 passos + 2</li>
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>Passos extra (R$ 65,00)</li>
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>Gratuitamente 10-20 fotos</li>
+            </ul>
+            <div class="panel-footer">
+                <a class="btn btn-lg btn-block btn-info" href="http://www.jquery2dotnet.com">ORÇAR</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
 
-    <hr>
-    <div class="divider"></div>
-</div>
-
-<div class="divider" id="section4"></div>
-
-<div class="row">
-    <div class="col-md-8 col-md-offset-1">
+                <h4 class="text-center">
+                    PONTO COMERCIAL GRANDE</h4>
+                <img src="img/price_big.jpg" class="img-responsive full-size">
+                </br>
+                <h4 class="text-center">
+                    Hotéis, parques, fazendas...</h4>
+            </div>
+            <div class="panel-body text-center">
+                <p class="lead">
+                    <strong>R$ 2900,00</strong></p>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>40 passos</li>
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>Negociável</li>
+                <li class="list-group-item"><i class="icon-ok text-danger"></i>Gratuitamente 10-30 fotos</li>
+            </ul>
+            <div class="panel-footer">
+                <a class="btn btn-lg btn-block btn-success" href="http://www.jquery2dotnet.com">ORÇAR</a>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
 
-<div class="row">
+<div class="divider" id="section4">
 
-    <div class="col-sm-10 col-sm-offset-1">
-        <h1>Localização</h1>
-        </br>
-    </div>
+</div>
+
+<div class="col-sm-10 col-sm-offset-1">
+    <h1>Localização</h1>
+    </br>
+</div>
+
+<div class="row">
 
     <div id="map-canvas"></div>
     </br>
