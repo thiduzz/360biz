@@ -18,7 +18,7 @@
 
                 <div class="container">
                     <div class="carousel-caption">
-                        <h2>Engage o cliente com Google BusinessView</h2>
+                        <h2>Engaje o cliente com Google BusinessView</h2>
                         <p></p>
                     </div>
                 </div>

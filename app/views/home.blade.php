@@ -247,7 +247,6 @@
         </div>
 
     </div>
-    <div class="divider"></div>
 </div>
 
 
@@ -404,7 +403,7 @@
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
-                    Entre em contato <small>Sinta-se a vontade para nos contatar</small></h1>
+                    Contato <small>Sinta-se a vontade para nos contatar</small></h1>
             </div>
         </div>
     </div>
