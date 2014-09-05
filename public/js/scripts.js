@@ -1,28 +1,98 @@
 
-$(document).ready(function(){$('.carousel').carousel({interval:false});
+$(document).ready(function(){
 
-/* affix the navbar after scroll below header */
-$('#nav').affix({
-      offset: {
-        top: $('header').height()-$('#nav').height()
-      }
-});	
+    var $window = $(window);
 
-/* highlight the top nav as scrolling occurs */
+    // Function to handle changes to style classes based on window width
+    function checkWidth() {
+        if ($window.width() < 980) {
+            $('.ic-step').removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-down');
+        };
+
+        if ($window.width() >= 980) {
+            $('.ic-step').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-right');
+        }
+    }
+
+    // Execute on load
+    checkWidth();
+    $(window).resize(checkWidth);
+
+$('.carousel').carousel({interval:false});
+
+    /* change chevron icon when expanding panels */
+$('#collapseDetails').on('shown.bs.collapse', function() {
+        $(".chevron-detail").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+    });
+$('#collapseDetails').on('hidden.bs.collapse', function() {
+        $(".chevron-detail").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+    });
+    $('#collapseIncluded').on('shown.bs.collapse', function() {
+        $(".chevron-included").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+    });
+    $('#collapseIncluded').on('hidden.bs.collapse', function() {
+        $(".chevron-included").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+    });
+
+    /* affix the navbar after scroll below header */
+    $('#nav').affix({
+        offset: {
+            top: $('header').height()-$('#nav').height()
+        }
+    });
+
+    /* highlight the top nav as scrolling occurs */
 $('body').scrollspy({ target: '#nav' })
 
 /* smooth scrolling for scroll to top */
 $('.scroll-top').click(function(){
   $('body,html').animate({scrollTop:0},1000);
 })
+/**function that tells if element is on the viewport**/
+ $.fn.isOnScreen = function(){
+
+        var win = $(window);
+
+        var viewport = {
+            top : win.scrollTop(),
+            left : win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+    };
 
 /* smooth scrolling for nav sections */
 $('#nav .navbar-nav li>a').click(function(){
-  var link = $(this).attr('href');
-  var posi = $(link).offset().top;
-  $('body,html').animate({scrollTop:posi},700);
+    var link = $(this).attr('href');
+    if ($window.width() >= 768) {
+    var navbar_height = $(".navbar").height();
+    var posi;
+    if($('header').isOnScreen() == true)
+    {
+        posi = $(link).offset().top - navbar_height;
+    }else{
+        posi = $(link).offset().top;
+    }
+    }else{
+        posi = $(link).offset().top;
+    }
+    $('body,html').animate({scrollTop:posi},700);
 });
 
+    /**
+     *
+     $('body,html').animate({scrollTop:posi},700);
+     var link = $(this).attr('href');
+     var posi = $(link).offset().top;
+     $('body,html').animate({scrollTop:posi},700);
+     */
 
 /* copy loaded thumbnails into carousel */
 $('.panel .img-responsive').on('load', function() {
