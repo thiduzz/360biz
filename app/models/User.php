@@ -7,6 +7,8 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+    protected $primaryKey = 'id_user';
+
 	use UserTrait, RemindableTrait;
 
 	/**

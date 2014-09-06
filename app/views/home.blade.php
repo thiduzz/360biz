@@ -6,26 +6,26 @@
 <div class="container">
     <div class="col-sm-10 col-sm-offset-1">
         <div class="page-header text-center">
-            <h1>Porque o Google Business Photos?</h1>
+            <h1>Porque Google Business Photos?</h1>
         </div>
         <div class="row">
 
             <div class="col-md-4">
-                <div class="panel-thumbnail "><img src="img/ic_clients.png" class="img-responsive center-block"></div>
+                <div class="panel-thumbnail "><img src="img/public/ic_clients.png" class="img-responsive center-block"></div>
                 <h2 class="text-center">Novos clientes</h2>
 
                 <p>Uma maneira de inovar com o design, conceito e atmosfera do seu negócio. Os clientes irão ser
                     encorajados a entrar em seu ponto comercial muito antes de ver a porta. </p>
             </div>
             <div class="col-md-4">
-                <div class="panel-thumbnail"><img src="img/ic_location.png" class="img-responsive center-block"></div>
+                <div class="panel-thumbnail"><img src="img/public/ic_location.png" class="img-responsive center-block"></div>
                 <h2 class="text-center">Posicionamento</h2>
 
                 <p>Os clientes irão achar o seu negócio de maneira mais rápida e fácil. O Tour Virtual será exibido na
                     pesquisa do Google, Google Maps e Google+ Place e pode fazer parte de seu website. </p>
             </div>
             <div class="col-md-4">
-                <div class="panel-thumbnail"><img src="img/ic_piggy.png" class="img-responsive center-block"></div>
+                <div class="panel-thumbnail"><img src="img/public/ic_piggy.png" class="img-responsive center-block"></div>
                 <h2 class="text-center">Economize</h2>
 
                 <p>Este é um investimento único para a sessão fotográfica, aquisição, inserção do Tour Virtual e
@@ -81,7 +81,7 @@
 
     </br>
     <div class="col-sm-2 vertical-align">
-        <div class="center-block"><img src="img/apply-agency-badge.jpg" class="img-responsive"></div>
+        <div class="center-block"><img src="img/public/apply-agency-badge.jpg" class="img-responsive"></div>
     </div>
     <div class="divider"></div>
 </div>
@@ -260,7 +260,7 @@
             <div class="panel-heading">
                 <h4 class="text-center">
                     PONTO COMERCIAL PEQUENO</h4>
-                <img src="img/price_small.jpg" class="img-responsive full-size">
+                <img src="img/public/price_small.jpg" class="img-responsive full-size">
                 </br>
                 <h4 class="text-center">
                     Pequena loja, salão, lanchonete...</h4>
@@ -285,7 +285,7 @@
             <div class="panel-heading">
                 <h4 class="text-center">
                     PONTO COMERCIAL MÉDIO</h4>
-                <img src="img/price_medium.jpg" class="img-responsive full-size">
+                <img src="img/public/price_medium.jpg" class="img-responsive full-size">
                 </br>
                 <h4 class="text-center">
                     Restaurante, bistrô, pousada...</h4>
@@ -311,7 +311,7 @@
 
                 <h4 class="text-center">
                     PONTO COMERCIAL GRANDE</h4>
-                <img src="img/price_big.jpg" class="img-responsive full-size">
+                <img src="img/public/price_big.jpg" class="img-responsive full-size">
                 </br>
                 <h4 class="text-center">
                     Hotéis, parques, fazendas...</h4>
@@ -437,7 +437,7 @@
                                     <label for="subject">
                                         Assunto</label>
                                     <select id="subject" name="subject" class="form-control" required="required">
-                                        <option value="na" selected="">Escolha</option>
+                                        <option value="" selected disabled>Escolha</option>
                                         <option value="service">Atendimento em Geral</option>
                                         <option value="suggestions">Sugestão</option>
                                         <option value="product">Suporte ao Produto</option>

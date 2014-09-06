@@ -1,5 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
+@font-face {
+    font-family: 'Sinkin Sans 400 Regular';
+    src: url(../../fonts/sinkinsans-400regular-webfont.eot);
+    src: url(../../fonts/sinkinsans-400regular-webfont.eot?#iefix) format('embedded-opentype'), url(../../fonts/sinkinsans-400regular-webfont.woff) format('woff'), url(../../fonts/sinkinsans-400regular-webfont.ttf) format('truetype'), url(../../fonts/sinkinsans-400regular-webfont.svg#sinkin_sans400_regular) format('svg')
+}
+
+h1, h2, h3, h4, .h1, legend{
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Sinkin Sans 400 Regular';
+}
+
 html,
 body {
   height: 100%;
@@ -294,7 +305,7 @@ section {
 }
 
 .bg-5 {
-    background: url('../img/bg_services.jpg') no-repeat center center fixed;
+    background: url('../../img/public/bg_services.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -344,6 +355,8 @@ section {
     color: #FFF;
 }
 .h1 small {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Sinkin Sans 400 Regular';
     font-size: 24px;
 }
 

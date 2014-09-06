@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="topo-img" src="img/indoormap.jpg">
+                <img class="topo-img" src="img/public/indoormap.jpg">
                 <div class="container">
                     <div class="carousel-caption">
                         <h2>Indoor Maps</h2>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="topo-img" src="img/img3.jpg">
+                <img class="topo-img" src="img/public/img3.jpg">
                 <div class="container">
                     <div class="carousel-caption">
                         <h2>Mande orçar o seu negócio agora!</h2>
@@ -43,7 +43,7 @@
             </div>
         </div><!-- /.carousel-inner -->
         <div class="row">
-            <div class="col-md-2 col-md-offset-5 logo"><img class="img-responsive" src="img/logo-wt-sm.png" alt="" /></div>
+            <div class="col-md-2 col-md-offset-5 logo"><img class="img-responsive" src="img/public/logo-wt-sm.png" alt="" /></div>
         </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">

@@ -126,8 +126,9 @@ $('.panel-thumbnail>a').click(function(e){
     e.preventDefault();
     var idx = $(this).parents('.panel').parent().index();
   	var id = parseInt(idx);
-  	
-  	$('#myModal').modal('show'); // show the modal
+    $('#myModal').modal({ keyboard: false })
+    $('#myModal').modal('show'); // show the modal
+
     $('#modalCarousel').carousel(id); // slide carousel to selected
   	return false;
 });

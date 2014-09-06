@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>360Biz - Agência de BusinessView</title>
-    <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    {{ HTML::style('/css/bootstrap.css') }}
+    {{ HTML::style('/font-awesome/css/font-awesome.css') }}
     <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    {{ HTML::script('/js/html5-shiv.js') }}
     <![endif]-->
-    <link href="css/styles.css" rel="stylesheet">
+    {{ HTML::style('/css/public/styles.css') }}
 
 </head>
 <body>
 <!-- Wrap all page content here -->
 <div id="wrap">
 
-
 @include('layout.mapheader')
-
-
 
 @include('layout.navigation')
 
@@ -34,7 +31,7 @@
 </ul>
 
 
-<div class="modal" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -63,8 +60,8 @@
 
 <!-- script references -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+    {{ HTML::script('/js/bootstrap.min.js') }}
+    {{ HTML::script('/js/public/scripts.js') }}
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-<script src="js/scripts.js"></script>
 </body>
 </html>

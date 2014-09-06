@@ -2,3 +2,26 @@
 
 
 Route::get('/', array('as'=>'home', 'uses'=>'HomeController@home'));
+
+/*
+ * Nao autenticados
+ */
+
+Route::group(array('before'=>'guest'), function(){
+
+    /*
+     * protecao CSRF group
+     */
+    Route::group(array('before='=>'csrf'),function(){
+
+
+        Route::post('/account/create', array('as'=>'account-create-post','uses'=>'AccountController@postCreate'));
+
+    });
+
+    Route::get('/account/create', array('as'=>'account-create','uses'=>'AccountController@getCreate'));
+
+    /*Pega o metodo get e post juntos, nao eh recomendado usar
+    Route::controller('account','AccountController');
+    */
+});
