@@ -22,7 +22,7 @@
 
 @include('layout.navigation')
 
-@yield('content')
+@include('layout.home')
 
 @include('layout.footer')
 

@@ -46,7 +46,7 @@
                     <ul class="dropdown-menu">
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sou cliente</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('account-create')}}">Sou fotógrafo</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('cp')}}">Sou fotógrafo</a></li>
                     </ul>
                 </li>
             </ul>

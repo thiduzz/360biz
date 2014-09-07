@@ -35,7 +35,15 @@
     <!-->
     @if(!Auth::check())
     <style type="text/css">
-        @media (min-width: 1280px) {
+
+        .box0
+        {
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+
+        @media (min-width: 1200px) {
 
             .wrapper {
                 display: inline-block;
@@ -59,14 +67,6 @@
                 min-height: 100%;
                 display: block;
             }
-            .col-lg-3, .col-lg-9
-            {
-                height: 100%;
-                padding-top: 60px;
-                padding-bottom: 60px;
-                min-height: 100%;
-            }
-
         }
 
         #main-content {
@@ -76,17 +76,9 @@
 
         }
 
-        @media (max-width: 768px) {
-            .col-lg-3
-            {
-                padding-bottom: 60px;
-                min-height: 100%;
-            }
-        #content-row{
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-            .mtbox{
+        @media (max-width: 1199px) {
+
+            #content-row{
                 margin-top: 0px;
                 margin-bottom: 0px;
             }
@@ -102,120 +94,14 @@
 @include('layout.cp_navigation')
 
 <!-- **********************************************************************************************************************************************************
-MAIN SIDEBAR MENU
-*********************************************************************************************************************************************************** -->
-<!--sidebar start-->
-    @if (Auth::check())
-<aside>
-    <div id="sidebar"  class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu" id="nav-accordion">
-
-            <p class="centered"><a href="profile.html"><img src="../img/cp/ui-sam.jpg" class="img-circle" width="60"></a></p>
-            <h5 class="centered">Marcel Newman</h5>
-
-            <li class="mt">
-                <a class="active" href="index.html">
-                    <i class="fa fa-dashboard"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-desktop"></i>
-                    <span>UI Elements</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="general.html">General</a></li>
-                    <li><a  href="buttons.html">Buttons</a></li>
-                    <li><a  href="panels.html">Panels</a></li>
-                </ul>
-            </li>
-
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-cogs"></i>
-                    <span>Components</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="calendar.html">Calendar</a></li>
-                    <li><a  href="gallery.html">Gallery</a></li>
-                    <li><a  href="todo_list.html">Todo List</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-book"></i>
-                    <span>Extra Pages</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="blank.html">Blank Page</a></li>
-                    <li><a  href="login.html">Login</a></li>
-                    <li><a  href="lock_screen.html">Lock Screen</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-tasks"></i>
-                    <span>Forms</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="form_component.html">Form Components</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-th"></i>
-                    <span>Data Tables</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="basic_table.html">Basic Table</a></li>
-                    <li><a  href="responsive_table.html">Responsive Table</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class=" fa fa-bar-chart-o"></i>
-                    <span>Charts</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="morris.html">Morris</a></li>
-                    <li><a  href="chartjs.html">Chartjs</a></li>
-                </ul>
-            </li>
-
-        </ul>
-        <!-- sidebar menu end-->
-    </div>
-</aside>
-@endif
-    <!--sidebar end-->
-
-<!-- **********************************************************************************************************************************************************
 MAIN CONTENT
 *********************************************************************************************************************************************************** -->
 <!--main content start-->
 <section id="main-content" >
 <section class="wrapper">
-<div id="content-row" class="row">
 
-    @if(Auth::check())
-        @include('layout.cp_index')
-    @else
-        @include('layout.cp_welcome')
-    @endif
-
-<!-- **********************************************************************************************************************************************************
-RIGHT SIDEBAR CONTENT
-*********************************************************************************************************************************************************** -->
-    @if(Auth::check())
-    @include('layout.cp_logged_rpanel')
-    @else
     @yield('content')
-    @endif
 
-</div>
 </section>
 
     @include('layout.cp_footer')

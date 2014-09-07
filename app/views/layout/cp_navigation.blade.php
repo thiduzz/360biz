@@ -10,7 +10,7 @@ TOP BAR CONTENT & NOTIFICATIONS
     </div>
     @endif
     <!--logo start-->
-    <a href="index.html" class="logo"><b>360Bis</b></a>
+    <a href="{{URL::route('cp')}}" class="logo"><b>360Bis</b></a>
     <!--logo end-->
     @if(Auth::check())
     <div class="nav notify-row" id="top_menu">

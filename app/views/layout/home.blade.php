@@ -1,6 +1,4 @@
-@extends('layout.main')
 
-@section('content')<!-- Begin page content -->
 <div class="divider" id="section1"></div>
 
 <div class="container">
@@ -489,4 +487,3 @@
             </div>
     </div>
 </div>
-@stop
