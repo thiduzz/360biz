@@ -32,3 +32,15 @@ Route::group(array('before'=>'guest'), function(){
     Route::controller('account','AccountController');
     */
 });
+
+/*
+ * Autenticados
+ */
+
+Route::group(array('before'=>'auth'), function(){
+
+    Route::get('/account/signout', array(
+       'as' => 'account-signout',
+        'uses' => 'AccountController@getSignOut'
+    ));
+});

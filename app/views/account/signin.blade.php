@@ -34,6 +34,66 @@
 MAIN CONTENT
 *********************************************************************************************************************************************************** -->
 
+<style type="text/css">
+
+    .box0
+    {
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    @media (min-width: 1200px) {
+
+        .wrapper {
+            margin-bottom: 60px;
+            margin-top: 60px;
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            min-height: 100%;
+        }
+        #content-row{
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            min-height: 100%;
+            display: block;
+        }
+    }
+
+    #main-content {
+        margin-left: 0px;
+        padding-bottom: 60px;
+        padding-top: 60px;
+
+    }
+
+    .mb {
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 768px) {
+
+        .form-login {
+            max-width: 330px;
+            margin: 100px auto 100px;
+            background: #fff;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+    }
+
+    @media (max-width: 1024px)
+    {
+        #gritter-notice-wrapper
+        {
+            display: none;
+            visibility: hidden;
+        }
+    }
+</style>
+
 <div id="login-page">
     <div class="container">
 
@@ -48,7 +108,19 @@ MAIN CONTENT
                 <input type="text" class="form-control" placeholder="Nome do usuário" name="username" autofocus>
                 <br>
                 <input type="password" class="form-control" placeholder="Senha" name="password">
+<br>
+                @if ($errors->count() > 0)
+                <div class="alert alert-danger">
 
+                    @foreach ($errors->all() as $error)
+                        {{ $error }}<br>
+                    @endforeach
+                </div>
+                @elseif (Session::has('global'))
+                <div class="alert alert-danger">
+                    {{ Session::get('global') }}
+                    </div>
+                @endif
                 <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Esqueceu sua senha?</a>
@@ -94,9 +166,9 @@ MAIN CONTENT
 
     </div>
 
-    @include('layout.cp_footer')
 </div>
 
+@include('layout.cp_footer')
 {{ HTML::script('/js/jquery-2.1.1.min.js') }}
 {{ HTML::script('/js/jquery.js') }}
 <!--<script src="assets/js/jquery-1.8.3.min.js"></script>-->

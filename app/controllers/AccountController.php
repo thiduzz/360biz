@@ -2,6 +2,14 @@
 
 class AccountController extends BaseController{
 
+    /** get signout - nao precisa postar nada, so redirecionar */
+    public function getSignOut()
+    {
+        Auth::logout();
+        return Redirect::route('layout.cp_main');
+    }
+
+
     /** get the signin view */
     public function getSignIn()
     {
@@ -11,7 +19,30 @@ class AccountController extends BaseController{
     /** post data from the form */
     public function postSignIn()
     {
+        $validator = Validator::make(Input::all(), array(
+           'username' => 'required|max:50',
+           'password' => 'required|min:6|max:20'
+        ));
 
+        if($validator->fails())
+        {
+            return Redirect::route('account-signin')
+                ->withInput()
+                ->withErrors($validator);
+        }else{
+            $auth = Auth::attempt(array(
+                'username' => Input::get('username'),
+                'password' => Input::get('password'),
+                'active' => 1
+            ));
+            if($auth)
+            {
+                return Redirect::intended('/');
+            }else{
+                return Redirect::route('account-signin')->with('global','O usuário/senha está incorreto, tente novamente');
+            }
+        }
+        return Redirect::route('account-signin')->with('global','O login falhou, talvez sua conta está inativa');
     }
 
     /** get the form view**/

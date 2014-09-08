@@ -39,6 +39,16 @@
             </ul>
             @if(Auth::check())
             <!-- Já esta logado, adicionar dropdown com Sign out e acessar o painel de controle-->
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog fa-fw"></i>{{Auth::user()->name}}</a>
+                    <ul class="dropdown-menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('cp')}}">Painel de Controle</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('account-signout')}}">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
             @else
             <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li class="dropdown">

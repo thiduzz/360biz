@@ -327,7 +327,7 @@
             <p>Confirmação</p>
         </div>
         <div class="process-step">
-            <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
             <p>Portfólio</p>
         </div>
         <div class="process-step">
@@ -346,6 +346,30 @@
             <div class="alert alert-success"><b>Uhul!</b> Você acabou de ativar sua conta com sucesso.<br></div>
             </div>
         </div>
+    <br>
+    <script type="text/javascript">
+        $("profile-01").backstretch([
+            "../img/cp/login_bg.jpg"
+            , "../img/cp/login_bg2.jpg"
+            , "../img/cp/login_bg3.jpg"
+        ], {duration: 3000, fade: 750});
+        </script>
+    <div class="content-panel pn">
+
+
+        <div id="profile-01">
+            <h4>Olhos limpos e corações abertos</h4>
+            <h3>NÃO <PERDEM></PERDEM></h3>
+        </div>
+        <a>
+        <div class="profile-01 centered">
+            <p>ENTRAR EM SUA CONTA</p>
+        </div>
+        </a>
+        <div class="centered">
+            <h6><i class="fa fa-envelope"></i><br>OLHOS LIMPOS E CORAÇÕES ABERTOS NÃO PERDEM</h6>
+        </div>
+    </div>
     </div>
 
 
