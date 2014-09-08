@@ -1,21 +1,17 @@
 /*---LEFT BAR ACCORDION----*/
 
 $("document").ready(function(){
-    $("#frm").submit(function(e){
-        e.preventDefault();
-        var username = $("input#username").val();
-        var token =  $("input[name=_token]").val();
-        var dataString = 'username='+username+'&token='+token;
-        $.ajax({
-            type: "POST",
-            url : "admin/login",
-            data : dataString,
-            success : function(data){
-                console.log(data);
-            }
-        },"json");
+    $('#personal-form').submit(function( event ) {
+        if ( $( "#terms" ).is(':checked') && $('#policy').is(':checked') )
+        {
+            $("#warning_terms").attr("hidden", true);
+            return;
+        }
+            $("#warning_terms").attr("hidden", false);
+            event.preventDefault();
 
     });
+
 });//end of document ready function
 
 $(function() {
@@ -48,13 +44,7 @@ var Script = function () {
     });
 
 
-    jQuery('#personal-form').submit(function( event ) {
-        if ( jQuery( "#terms" ).is(':checked') && jQuery('#policy').is(':checked') ) {
-            jQuery( "span" ).text( "Validated..." ).show();
-            return;
-        }
-        event.preventDefault();
-    });
+
 
 //    sidebar toggle
 

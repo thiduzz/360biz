@@ -65,11 +65,13 @@
     }
 </style>
 
-<div class="page-header text-center">
-    <h1><i class="fa fa-angle-right"></i> Se aplique agora! <i class="fa fa-angle-left"></i></h1>
-</div>
+
 @if (!Session::has('global'))
 
+
+<div class="page-header text-center">
+    <h1><i class="fa fa-angle-right"></i> Pronto para trabalhar para nós? <i class="fa fa-angle-left"></i></h1>
+</div>
 <div class="process">
     <div class="process-row">
         <div class="process-step">
@@ -77,12 +79,12 @@
             <p>Dados Pessoais</p>
         </div>
         <div class="process-step">
-            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
-            <p>Portfólio</p>
-        </div>
-        <div class="process-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-thumbs-up fa-3x"></i></button>
             <p>Confirmação</p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
+            <p>Portfólio</p>
         </div>
         <div class="process-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-users fa-3x"></i></button>
@@ -259,6 +261,9 @@
                 </label>
             </div>
                 </div>
+                    <div class="col-sm-4" >
+                        <div class="alert alert-danger" hidden="true" id="warning_terms"><b>Atenção!</b> Para prosseguir você deve estar de acordo com os Termos e Condições do Sistema e com a Política da 360Bis.</div>
+                    </div>
                     </div>
                 <div class="form-group" style="border-bottom: 0px;" >
                     <div class="col-sm-offset-4 col-sm-4">
@@ -266,11 +271,15 @@
                         </div>
                     </div>
             </div>
+
         {{ Form::close() }}
 
     </div>
 </div><!-- /col-lg-3 -->
 @elseif (Session::has('global') && Session::get('global') == 'mail')
+<div class="page-header text-center">
+    <h1><i class="fa fa-angle-right"></i> Quase lá... <i class="fa fa-angle-left"></i></h1>
+</div>
 <div class="process">
     <div class="process-row">
         <div class="process-step">
@@ -278,12 +287,12 @@
             <p>Dados Pessoais</p>
         </div>
         <div class="process-step">
-            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
-            <p>Portfólio</p>
-        </div>
-        <div class="process-step">
             <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i class="fa fa-thumbs-up fa-3x"></i></button>
             <p>Confirmação</p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
+            <p>Portfólio</p>
         </div>
         <div class="process-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-users fa-3x"></i></button>
@@ -304,6 +313,9 @@
 </div>
 
 @elseif (Session::has('global') && Session::get('global') == 'activation-success')
+<div class="page-header text-center">
+    <h1><i class="fa fa-angle-right"></i> Agora sim, hora de mostrar seu trabalho! <i class="fa fa-angle-left"></i></h1>
+</div>
 <div class="process">
     <div class="process-row">
         <div class="process-step">
@@ -311,12 +323,12 @@
             <p>Dados Pessoais</p>
         </div>
         <div class="process-step">
-            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
-            <p>Portfólio</p>
-        </div>
-        <div class="process-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-thumbs-up fa-3x"></i></button>
             <p>Confirmação</p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
+            <p>Portfólio</p>
         </div>
         <div class="process-step">
             <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i class="fa fa-users fa-3x"></i></button>
@@ -338,6 +350,9 @@
 
 
 @elseif (Session::has('global') && Session::get('global') == 'activation-fail')
+<div class="page-header text-center">
+    <h1><i class="fa fa-angle-right"></i> Algo está errado... <i class="fa fa-angle-left"></i></h1>
+</div>
 <div class="process">
     <div class="process-row">
         <div class="process-step">
@@ -345,12 +360,12 @@
             <p>Dados Pessoais</p>
         </div>
         <div class="process-step">
-            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
-            <p>Portfólio</p>
-        </div>
-        <div class="process-step">
             <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i class="fa fa-thumbs-up fa-3x"></i></button>
             <p>Confirmação</p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-instagram fa-3x"></i></button>
+            <p>Portfólio</p>
         </div>
         <div class="process-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-users fa-3x"></i></button>
@@ -363,7 +378,7 @@
 
         <div class="form-panel">
             <h4 class="panel-title"><i class="fa fa-angle-right"></i>  Ativação da conta</h4>
-            <div class="alert alert-danger"><b>Wops!</b> Não pudemos ativar sua conta. Tente novamente mais tarde!<br></div>
+            <div class="alert alert-danger"><b>Wops!</b> Não conseguimos ativar sua conta. Tente novamente mais tarde!<br></div>
         </div>
     </div>
 </div>

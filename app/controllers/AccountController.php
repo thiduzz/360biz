@@ -2,6 +2,18 @@
 
 class AccountController extends BaseController{
 
+    /** get the signin view */
+    public function getSignIn()
+    {
+        return View::make('account.signin');
+    }
+
+    /** post data from the form */
+    public function postSignIn()
+    {
+
+    }
+
     /** get the form view**/
     public function getCreate()
     {

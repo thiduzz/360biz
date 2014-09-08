@@ -6,16 +6,13 @@ o processo de cadastro está quase finalizando, falta somente você clicar no li
 Por favor utilize o link abaixo para ativar sua conta: <br>
 <br>
 <a href="{{$link}}" >Clique aqui</a>
-
 <br><br><br>
-
------------------------------------------------------------------ <br>
-
-Caso não tenha solicitado a criação de uma conta no 360Bis, ou que isto é um caso de uso não autorizado do seu email, favor encaminhar este email para o remetente.
-
-
-<br><br><br>
-
 Atenciosamente,
 
 Suporte Técnico - 360Bis
+<br>
+----------------------------------------------------------------- <br>
+<br>
+Caso não tenha solicitado a criação de uma conta no 360Bis, ou que isto é um caso de uso não autorizado do seu email, favor encaminhar este email para o remetente.
+
+

@@ -218,7 +218,7 @@ RIGHT SIDEBAR CONTENT
     @if(Auth::check())
     @include('layout.cp_logged_rpanel')
     @else
-    @include('account.login')
+    @include('account.signin-min')
     @endif
 
 </div>
