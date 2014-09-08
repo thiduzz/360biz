@@ -30,7 +30,7 @@
     <!--[if lt IE 9]
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     -->
-    {{ HTML::script('/js/html4-shiv.js') }}
+    {{ HTML::script('/js/html5-shiv.js') }}
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <!-->
     @if(!Auth::check())
@@ -46,15 +46,8 @@
         @media (min-width: 1200px) {
 
             .wrapper {
-                display: inline-block;
-                padding-left: 0px;
-                padding-right: 0px;
-                padding-bottom: 0px;
-                margin-top: 0px;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                top: 0;
+                margin-bottom: 60px;
+                margin-top: 60px;
                 width: 100%;
                 min-width: 100%;
                 height: 100%;
@@ -76,12 +69,12 @@
 
         }
 
+        .mb {
+         padding-bottom: 60px;
+        }
+
         @media (max-width: 1199px) {
 
-            #content-row{
-                margin-top: 0px;
-                margin-bottom: 0px;
-            }
         }
     </style>
     @endif

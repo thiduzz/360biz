@@ -155,9 +155,11 @@ TOP BAR CONTENT & NOTIFICATIONS
     </div>
     @endif
     <div class="top-menu">
+        @if(Auth::check())
         <ul class="nav pull-right top-menu">
             <li><a class="logout" href="login.html">Logout</a></li>
         </ul>
+        @endif
     </div>
 </header>
 <!--header end-->

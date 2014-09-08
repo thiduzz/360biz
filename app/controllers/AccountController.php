@@ -13,6 +13,7 @@ class AccountController extends BaseController{
     {
         $validator = Validator::make(Input::all(),
             array(
+                'name'=>'required|max:50|min:3',
                 'username' => 'required|max:50',
                 'email' => 'required|max:50|email',
                 'email_again' => 'required|same:email',
@@ -28,21 +29,44 @@ class AccountController extends BaseController{
             $username = Input::get('username');
             $email = Input::get('email');
             $password = Input::get('password');
+            $name = Input::get('name');
             $code = str_random(60);
 
             $user = User::create(array(
-               'username' => $username,
+                'username' => $username,
+                'name'=> $name,
                 'email' => $email,
                 'password' => Hash::make($password),
                 'activation_code' => $code,
-                'status' => 'inactive'
+                'user_status' => 'inactive'
             ));
 
             if($user)
             {
-                Redirect::route('home')
-                    ->with('global','Sua conta foi criada! Favor ative sua conta, no email que foi enviado no email informado no cadastro.');
+                Mail::send('emails.auth.activate', array('link'=> URL::route('account-activate', $code), 'username' => $username, 'name' => $name), function($message) use ($user){
+                   $message->to($user->email, $user->username)->subject('Ativação de Conta - 360Bis');
+                });
+
+                return Redirect::route('account-create')
+                    ->with(array('global' => 'mail', 'email' => $email));
             }
         }
+    }
+
+    public function getActivate($code)
+    {
+        $user = User::where('activation_code', '=', $code)->where('active','=',0);
+        if($user->count())
+        {
+            $user = $user->first();
+            $user->active = 1;
+            $user->activation_code = '';
+            //ativa o usuario e altera a o codigo de ativacao (nao tem mais uso...)
+            if($user->save())
+            {
+               return Redirect::route('account-create')->with('global','activation-success');
+            }
+        }
+        return Redirect::route('account-create')->with('global','activation-fail');
     }
 }

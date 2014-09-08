@@ -3,7 +3,7 @@
 
 Route::get('/', array('as'=>'home', 'uses'=>'HomeController@home'));
 
-Route::get('/layout/cp_main', array('as'=>'cp', 'uses'=>'HomeController@home_cp'));
+Route::get('/cp_main', array('as'=>'cp', 'uses'=>'HomeController@home_cp'));
 /*
  * Nao autenticados
  */
@@ -25,4 +25,5 @@ Route::group(array('before'=>'guest'), function(){
     /*Pega o metodo get e post juntos, nao eh recomendado usar
     Route::controller('account','AccountController');
     */
+    Route::get('/account/activate/{code}', array('as'=>'account-activate', 'uses'=> 'AccountController@getActivate'));
 });
