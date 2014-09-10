@@ -46,7 +46,7 @@ MAIN CONTENT
     @media (min-width: 1200px) {
 
         .wrapper {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             margin-top: 60px;
             width: 100%;
             min-width: 100%;
@@ -64,13 +64,13 @@ MAIN CONTENT
 
     #main-content {
         margin-left: 0px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         padding-top: 60px;
 
     }
 
     .mb {
-        padding-bottom: 60px;
+        padding-bottom: 40px;
     }
 
     @media (max-width: 768px) {
@@ -116,18 +116,33 @@ MAIN CONTENT
                         {{ $error }}<br>
                     @endforeach
                 </div>
-                @elseif (Session::has('global'))
+                <br>
+                @elseif (Session::has('global') && Session::get('global') != 'pass-changed' )
                 <div class="alert alert-danger">
                     {{ Session::get('global') }}
-                    </div>
+                    </div><br>
+                @elseif (Session::has('global') && Session::get('global') == 'pass-changed' )
+                <div class="alert alert-success">
+                    <b>Uhul!</b> Sua senha foi alterada com sucesso, favor entre novamente com sua senha nova.
+                </div><br>
                 @endif
-                <label class="checkbox">
-		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Esqueceu sua senha?</a>
-		
-		                </span>
-                </label><br>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="remember" value="">
+                        Lembrar de mim
+                    </label>
+                </div>
+                <br>
                 <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> LOGIN </button>
+
+                <br>
+                <label class="checkbox centered">
+		                <span>
+		                    <a data-toggle="modal" href="login.html#myModal"> Esqueceu sua senha?</a>
+
+		                </span>
+                </label>
                 <hr>
 
                 <div class="registration">
@@ -147,6 +162,12 @@ MAIN CONTENT
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title">Esqueceu sua senha ?</h4>
                         </div>
+
+                        {{ Form::open( array(
+                        'route' => 'account-recovery-post',
+                        'method' => 'post',
+                        'id' => 'forgot-form'
+                        ) ) }}
                         <div class="modal-body">
                             <p>Entre com o seu email para resetar sua senha.</p>
                             <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
@@ -154,8 +175,9 @@ MAIN CONTENT
                         </div>
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
-                            <button class="btn btn-theme" type="button">Enviar</button>
+                            <button class="btn btn-theme" type="button" >Enviar</button>
                         </div>
+                        {{Form:close()}}
                     </div>
                 </div>
             </div>
@@ -167,6 +189,7 @@ MAIN CONTENT
     </div>
 
 </div>
+
 
 @include('layout.cp_footer')
 {{ HTML::script('/js/jquery-2.1.1.min.js') }}
@@ -191,6 +214,31 @@ MAIN CONTENT
 
 {{ HTML::script('/js/cp/sparkline-chart.js') }}
 {{ HTML::script('/js/cp/zabuto_calendar.js') }}
+
+@if(Session::has('global') && Session::get('global') == 'pass-changed')
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var unique_id = $.gritter.add({
+            // (string | mandatory) the heading of the notification
+            title: 'Sua senha foi alterada com sucesso!',
+            // (string | mandatory) the text inside the notification
+            text: 'Entre com sua nova senha para poder acessar ao sistema novamente',
+            // (string | optional) the image to display on the left
+            image: '../img/cp/lock.png',
+            // (bool | optional) if you want it to fade out on its own or just sit there
+            sticky: true,
+            // (int | optional) the time you want it to be alive for before fading out
+            time: '',
+            // (string | optional) the class name you want to apply to that specific message
+            class_name: 'my-sticky-class'
+        });
+
+        return false;
+    });
+</script>
+@endif
 
 <script type="text/javascript">
     $.backstretch([

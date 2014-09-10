@@ -64,7 +64,7 @@
 <!-- First Member -->
 <div class="desc">
     <div class="thumb">
-        <img class="img-circle" src="../img/cp/ui-divya.jpg" width="35px" height="35px" align="">
+        <img class="img-circle" src="../../img/cp/ui-divya.jpg" width="35px" height="35px" align="">
     </div>
     <div class="details">
         <p><a href="#">DIVYA MANIAN</a><br/>
@@ -75,7 +75,7 @@
 <!-- Second Member -->
 <div class="desc">
     <div class="thumb">
-        <img class="img-circle" src="../img/cp/ui-sherman.jpg" width="35px" height="35px" align="">
+        <img class="img-circle" src="../../img/cp/ui-sherman.jpg" width="35px" height="35px" align="">
     </div>
     <div class="details">
         <p><a href="#">DJ SHERMAN</a><br/>
@@ -86,7 +86,7 @@
 <!-- Third Member -->
 <div class="desc">
     <div class="thumb">
-        <img class="img-circle" src="../img/cp/ui-danro.jpg" width="35px" height="35px" align="">
+        <img class="img-circle" src="../../img/cp/ui-danro.jpg" width="35px" height="35px" align="">
     </div>
     <div class="details">
         <p><a href="#">DAN ROGERS</a><br/>
@@ -97,7 +97,7 @@
 <!-- Fourth Member -->
 <div class="desc">
     <div class="thumb">
-        <img class="img-circle" src="../img/cp/ui-zac.jpg" width="35px" height="35px" align="">
+        <img class="img-circle" src="../../img/cp/ui-zac.jpg" width="35px" height="35px" align="">
     </div>
     <div class="details">
         <p><a href="#">Zac Sniders</a><br/>
@@ -108,7 +108,7 @@
 <!-- Fifth Member -->
 <div class="desc">
     <div class="thumb">
-        <img class="img-circle" src="../img/cp/ui-sam.jpg" width="35px" height="35px" align="">
+        <img class="img-circle" src="../../img/cp/ui-sam.jpg" width="35px" height="35px" align="">
     </div>
     <div class="details">
         <p><a href="#">Marcel Newman</a><br/>
@@ -117,17 +117,4 @@
     </div>
 </div>
 
-<!-- CALENDAR-->
-<div id="calendar" class="mb">
-    <div class="panel green-panel no-margin">
-        <div class="panel-body">
-            <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                <div class="arrow"></div>
-                <h3 class="popover-title" style="disadding: none;"></h3>
-                <div id="date-popover-content" class="popover-content"></div>
-            </div>
-            <div id="my-calendar"></div>
-        </div>
-    </div>
-</div><!-- / calendar -->
 </div><!-- /col-lg-3 -->

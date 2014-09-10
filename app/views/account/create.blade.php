@@ -1,6 +1,14 @@
 @extends('layout.cp_main_empty')
 @section('content')
+
 <style type="text/css">
+
+    #main-content {
+        margin-left: 0px;
+        padding-bottom: 40px;
+        padding-top: 60px;
+
+    }
 
     .process-row {
         display: table-row;
@@ -65,6 +73,10 @@
     }
 </style>
 
+<!--main content start-->
+<section id="main-content" >
+<section class="wrapper">
+
 
 @if (!Session::has('global'))
 
@@ -96,13 +108,13 @@
     <div class="col-lg-offset-3 col-lg-6">
 
         {{ Form::open( array(
-        'route' => 'account-create',
+        'route' => 'account-create-post',
         'method' => 'post',
         'id' => 'personal-form',
         'class' => 'form-horizontal style-form'
         ) ) }}
             <div class="form-panel">
-                <h4 class="panel-title"><i class="fa fa-angle-right"></i>  Pessoal</h4>
+                <h3 class="panel-title"><i class="fa fa-angle-right"></i>  Pessoal</h3>
 
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nome</label>
@@ -183,7 +195,7 @@
                 </div>
                 <br>
             <div class="form-panel">
-                <h4 class="panel-title"><i class="fa fa-angle-right"></i>  Acesso</h4>
+                <h3 class="panel-title"><i class="fa fa-angle-right"></i>  Acesso</h3>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Usuário</label>
                     <div class="col-sm-6">
@@ -336,41 +348,27 @@
         </div>
     </div>
 </div>
+
 <div class="row mt mb">
-    <div class="col-lg-offset-3 col-lg-6">
 
-        <div class="form-panel">
-            <h4 class="panel-title"><i class="fa fa-angle-right"></i>  Ativação da conta</h4>
-
-
-            <div class="alert alert-success"><b>Uhul!</b> Você acabou de ativar sua conta com sucesso.<br></div>
+    <div class="col-lg-offset-3 col-lg-6 mb">
+        <div class="content-panel pn">
+            <div id="profile-01">
+                <h3><i class="fa fa-key fa-3x"></i></h3>
             </div>
-        </div>
-    <br>
-    <script type="text/javascript">
-        $("profile-01").backstretch([
-            "../img/cp/login_bg.jpg"
-            , "../img/cp/login_bg2.jpg"
-            , "../img/cp/login_bg3.jpg"
-        ], {duration: 3000, fade: 750});
-        </script>
-    <div class="content-panel pn">
 
+            <div class="centered">
+                <h3>Conta ativada</h3>
+            </div>
+            <a href="{{URL::route('account-signin')}}">
+                <div class="profile-01 centered">
+                    <p>Clique aqui para acessar</p>
+                </div>
+            </a>
+        </div><!-- --/content-panel ---->
+    </div>
+</div>
 
-        <div id="profile-01">
-            <h4>Olhos limpos e corações abertos</h4>
-            <h3>NÃO <PERDEM></PERDEM></h3>
-        </div>
-        <a>
-        <div class="profile-01 centered">
-            <p>ENTRAR EM SUA CONTA</p>
-        </div>
-        </a>
-        <div class="centered">
-            <h6><i class="fa fa-envelope"></i><br>OLHOS LIMPOS E CORAÇÕES ABERTOS NÃO PERDEM</h6>
-        </div>
-    </div>
-    </div>
 
 
 @elseif (Session::has('global') && Session::get('global') == 'activation-fail')
@@ -402,9 +400,14 @@
 
         <div class="form-panel">
             <h4 class="panel-title"><i class="fa fa-angle-right"></i>  Ativação da conta</h4>
-            <div class="alert alert-danger"><b>Wops!</b> Não conseguimos ativar sua conta. Tente novamente mais tarde!<br></div>
+            <div class="alert alert-danger"><b>Wops!</b> Não conseguimos ativar sua conta, talvez ela já tenha sido ativada.<br> Tente logar no sistema, caso não consiga, tente ativar novamente mais tarde!<br></div>
         </div>
     </div>
 </div>
 @endif
+
+</section>
+
+@include('layout.cp_footer')
+</section>
 @stop

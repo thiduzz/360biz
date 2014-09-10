@@ -2,11 +2,64 @@
 
 class AccountController extends BaseController{
 
+    public function  postRecovery()
+    {
+        $validator = Validator::make(Input::all(), array(
+            'email' => 'required|email'
+        ));
+        if($validator->fails())
+        {
+            return Redirect::route('change-security')
+                ->withErrors($validator)
+                ->with('global','recovery-error');
+        }
+
+        return Redirect::route('change-security')->with('global','Não foi possível alterar sua senha, tente mais tarde');
+    }
+
+    public function  postChangePassword()
+    {
+        $validator = Validator::make(Input::all(), array(
+            'password_old' => 'required',
+            'password' => 'required|min:6|max:20',
+            'password_again' => 'required|same:password'
+        ));
+
+        if($validator->fails())
+        {
+            return Redirect::route('change-security')
+                ->withErrors($validator);
+        }else{
+            $user = User::find(Auth::user()->id_user);
+            $old_pass = Input::get('password_old');
+            $new_pass = Input::get('password');
+            if(Hash::check($old_pass, Auth::user()->getAuthPassword()))
+            {
+                $user->password = Hash::make($new_pass);
+
+                if($user->save())
+                {
+                    Auth::logout();
+                    return Redirect::route('account-signin')->with('global','pass-changed');
+                }
+            }
+            return Redirect::route('change-security')->with('global','Não foi possível alterar sua senha, tente mais tarde');
+        }
+
+        return Redirect::route('change-security')->with('global','Não foi possível alterar sua senha, tente mais tarde');
+    }
+
+    /** get the signin view */
+    public function getSecurityView()
+    {
+        return View::make('account.change-security');
+    }
+
     /** get signout - nao precisa postar nada, so redirecionar */
     public function getSignOut()
     {
         Auth::logout();
-        return Redirect::route('layout.cp_main');
+        return Redirect::route('cp');
     }
 
 
@@ -27,8 +80,8 @@ class AccountController extends BaseController{
         if($validator->fails())
         {
             return Redirect::route('account-signin')
-                ->withInput()
-                ->withErrors($validator);
+                ->withErrors($validator)
+            ->withInput();
         }else{
             $auth = Auth::attempt(array(
                 'username' => Input::get('username'),
@@ -37,12 +90,41 @@ class AccountController extends BaseController{
             ));
             if($auth)
             {
-                return Redirect::intended('/');
+                return Redirect::intended('/cp_main');
             }else{
-                return Redirect::route('account-signin')->with('global','O usuário/senha está incorreto, tente novamente');
+                return Redirect::route('account-signin')->with('global','O usuário/senha está incorreto. <br> Tente novamente mais tarde');
             }
         }
-        return Redirect::route('account-signin')->with('global','O login falhou, talvez sua conta está inativa');
+        return Redirect::route('account-signin')->with('global','O usuário/senha está incorreto. <br> Tente novamente mais tarde');
+    }
+
+    public function postSignInMin()
+    {
+        $validator = Validator::make(Input::all(), array(
+            'username' => 'required|max:50',
+            'password' => 'required|min:6|max:20'
+        ));
+
+        if($validator->fails())
+        {
+            return Redirect::route('cp')
+                ->withInput()
+                ->withErrors($validator);
+        }else{
+            $auth = Auth::attempt(array(
+                'username' => Input::get('username'),
+                'password' => Input::get('password'),
+                'active' => 1
+            ));
+
+            if($auth)
+            {
+                return Redirect::intended('/cp_main');
+            }else{
+                return Redirect::route('cp')->with('global','O usuário/senha está incorreto, tente novamente');
+            }
+        }
+        return Redirect::route('cp')->with('global','O usuário/senha está incorreto, tente novamente');
     }
 
     /** get the form view**/

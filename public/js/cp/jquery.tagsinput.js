@@ -275,7 +275,7 @@
 				
 					
 				} else {
-						// if a user tabs out of the field, create a new tag
+						// if a profile tabs out of the field, create a new tag
 						// this is only available if autocomplete is not used.
 						$(data.fake_input).bind('blur',data,function(event) { 
 							var d = $(this).attr('data-default');
@@ -290,7 +290,7 @@
 						});
 				
 				}
-				// if user types a comma, create a new tag
+				// if profile types a comma, create a new tag
 				$(data.fake_input).bind('keypress',data,function(event) {
 					if (event.which==event.data.delimiter.charCodeAt(0) || event.which==13 ) {
 					    event.preventDefault();
@@ -318,7 +318,7 @@
 				});
 				$(data.fake_input).blur();
 				
-				//Removes the not_valid class when user changes the value of the fake input
+				//Removes the not_valid class when profile changes the value of the fake input
 				if(data.unique) {
 				    $(data.fake_input).keydown(function(event){
 				        if(event.keyCode == 8 || String.fromCharCode(event.which).match(/\w+|[áéíóúÁÉÍÓÚñÑ,/]+/)) {

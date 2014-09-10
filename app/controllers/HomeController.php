@@ -8,7 +8,7 @@ class HomeController extends BaseController {
         {
             $message->to('test360bis@gmail.com','Thi')->subject('Test email');
         });
-        echo $user = User::find(1)->username;
+        echo $profile = User::find(1)->username;
          * **/
         return View::make('layout.main');
     }

@@ -33,21 +33,11 @@
     {{ HTML::script('/js/html5-shiv.js') }}
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <!-->
-    @if(!Auth::check())
     <style type="text/css">
-
-        .box0
-        {
-            padding-bottom: 20px;
-            margin-bottom: 10px;
-        }
-
 
         @media (min-width: 1200px) {
 
             .wrapper {
-                margin-bottom: 60px;
-                margin-top: 60px;
                 width: 100%;
                 min-width: 100%;
                 height: 100%;
@@ -62,22 +52,12 @@
             }
         }
 
-        #main-content {
-            margin-left: 0px;
-            padding-bottom: 60px;
-            padding-top: 60px;
-
-        }
-
-        .mb {
-         padding-bottom: 60px;
-        }
-
-        @media (max-width: 1199px) {
-
+        @media (max-width: 978px) {
+            .mb {
+                padding-bottom: 40px;
+            }
         }
     </style>
-    @endif
 </head>
 
 <body>
@@ -89,16 +69,8 @@
 <!-- **********************************************************************************************************************************************************
 MAIN CONTENT
 *********************************************************************************************************************************************************** -->
-<!--main content start-->
-<section id="main-content" >
-<section class="wrapper">
 
     @yield('content')
-
-</section>
-
-    @include('layout.cp_footer')
-</section>
 
 </section>
 
@@ -109,7 +81,7 @@ MAIN CONTENT
 <!--<script src="assets/js/jquery-1.8.3.min.js"></script>-->
 {{ HTML::script('/js/bootstrap.min.js') }}
 
-<script class="include" type="text/javascript" src="js/cp/jquery.dcjqaccordion.2.7.js"></script>
+<script class="include" type="text/javascript" src="../js/cp/jquery.dcjqaccordion.2.7.js"></script>
 {{ HTML::script('/js/cp/jquery.scrollTo.min.js') }}
 
 {{ HTML::script('/js/cp/jquery.nicescroll.js') }}
@@ -117,7 +89,6 @@ MAIN CONTENT
 
 <!--common script for all pages-->
 {{ HTML::script('/js/common-scripts.js') }}
-
 {{ HTML::script('/js/cp/gritter/js/jquery.gritter.js') }}
 {{ HTML::script('/js/cp/gritter-conf.js') }}
 
